@@ -6,7 +6,7 @@ import "view-design/dist/styles/iview.css";
 Vue.config.productionTip = false;
 Vue.use(ViewUI);
 
-console.log("鸡精");
+console.log("侬仔精");
 
 new Vue({
   render: (h) => h(App),
