@@ -7,6 +7,7 @@ Vue.config.productionTip = false;
 Vue.use(ViewUI);
 
 console.log("侬仔精");
+console.log('侬仔你')
 
 new Vue({
   render: (h) => h(App),
