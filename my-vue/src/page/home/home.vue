@@ -18,7 +18,8 @@ export default {
         return {
             name: '我的家',
             editor: null,
-            info_: null
+            info_: null,
+            dataList: ['1','2','3',['3','4','5'],['5','6','7']],
         }
     },
     created() {
@@ -26,12 +27,24 @@ export default {
     mounted() {
         this.seteditor()
         this.editor.txt.html(this.value)
+        console.log(99999, this.change(this.dataList));
     },
     methods: {
          seteditor() {
             this.editor = new E(this.$refs.toolbar, this.$refs.editor) 
             this.editor.create();
         },
+        change(arr) {
+            let ArrList = [];
+            arr.map(item => {
+                if (Array.isArray(item)) {
+                    ArrList = ArrList.concat(this.change(item));
+                } else {
+                    ArrList.push(item);
+                }
+            })
+            return ArrList;
+        }
     },
 }
 
