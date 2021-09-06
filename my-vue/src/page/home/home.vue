@@ -30,7 +30,7 @@ export default {
         console.log(99999, this.change(this.dataList));
     },
     methods: {
-         seteditor() {
+        seteditor() {
             this.editor = new E(this.$refs.toolbar, this.$refs.editor) 
             this.editor.create();
         },
