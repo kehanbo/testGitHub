@@ -3,7 +3,7 @@
        <div class="editor">
             <div ref="toolbar" class="toolbar">
             </div>
-            <div ref="editor" class="text">
+            <div ref="editor" class="text" @click="hanldediv">
             </div>
         </div>
   </div>
@@ -44,6 +44,9 @@ export default {
                 }
             })
             return ArrList;
+        },
+        hanldediv() {
+            console.log('hahaha');
         }
     },
 }
